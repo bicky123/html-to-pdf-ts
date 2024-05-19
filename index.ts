@@ -1,12 +1,13 @@
-import { Handler } from "aws-lambda";
+import { Context, Handler } from "aws-lambda";
 import { PdfService } from "./src/services/pdf.service";
 import { IRequestModel } from "./src/models/request.model";
 import { IResponseModel } from "./src/models/response.model";
 
 export const handler: Handler = async (
   event: IRequestModel,
-  context: any
+  context: Context
 ): Promise<IResponseModel> => {
+  console.log('awsRequestId', context.awsRequestId);
   const html = event.html;
   if (!html) {
     return {

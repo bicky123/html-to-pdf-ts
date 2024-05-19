@@ -1,3 +1,3 @@
 export interface IRequestModel {
-    html: string
+    html: string;
 }
