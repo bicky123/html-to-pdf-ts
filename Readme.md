@@ -7,7 +7,7 @@
 6. Upload zip to `s3` bucket
 7. Create `lambda-layer`
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 # Step To Deploy Html-To-Pdf Lambda
 1. Run command `npm install`
@@ -16,6 +16,6 @@
 4. Add a `Lambda Layer` to this `Lambda` 
 
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
-![alt text](image.png)
+![alt text](images/image.png)
