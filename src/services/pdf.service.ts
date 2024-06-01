@@ -2,7 +2,8 @@ const chromium = require("@sparticuz/chromium");
 import puppeteer from "puppeteer-core";
 
 export class PdfService {
-  async convertHtmlToPdf(html: string): Promise<Buffer | null> {
+
+  async convertHtmlToPdfAsync(html: string): Promise<Buffer | null> {
     let result = null;
     let browser = null;
     try {
@@ -34,4 +35,5 @@ export class PdfService {
     }
     return result;
   }
+  
 }

@@ -7,26 +7,26 @@ export const handler: Handler = async (
   event: IRequestModel,
   context: Context
 ): Promise<IResponseModel> => {
-  console.log('awsRequestId', context.awsRequestId);
+  console.log("awsRequestId", context.awsRequestId);
   const html = event.html;
   if (!html) {
     return {
       status: 400,
-      data: "Html is required parameter",
+      data: "Html is required parameter"
     };
   }
   const pdfService = new PdfService();
-  const response = await pdfService.convertHtmlToPdf(html);
+  const response = await pdfService.convertHtmlToPdfAsync(html);
   if (!response) {
     return {
       status: 500,
-      data: "Some error occurred",
+      data: "Some error occurred"
     };
   }
   const base64 = response.toString("base64");
   //console.log(base64);
   return {
     status: 200,
-    data: base64,
+    data: base64
   };
 };
